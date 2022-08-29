@@ -14,13 +14,24 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+This dataset contains data about customers of a financial institution. It is used to predict whether a customer will subscribe to a fixed term deposit.
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 
 ## Scikit-learn Pipeline
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**'
+The Scikit-learn pipeline reads in the data from a website csv file. The data is then cleaned as follows:
+* Variables that contain Yes/No answers i.e. default, housing, loan and poutcome are mapped to binary variables
+* The marital variable is also mapped to a binary variable
+* The job, contact and education variables are converted to indicator variables
+* Month and day of the week variables are mapped to integers
+
+The data is then split into a training and test dataset. 50% of the data is in training and 50% in the test set.
+
+The hyperparameters that are tuned are the inverse regularization strength and the maximum number of interations to converge. The classification algorithm is Logistic regression which predicts whether a customer will subscribe to a fixed term deposit or not.
 
 **What are the benefits of the parameter sampler you chose?**
+A Random
 
 **What are the benefits of the early stopping policy you chose?**
 
