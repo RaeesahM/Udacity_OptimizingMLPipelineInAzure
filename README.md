@@ -32,6 +32,8 @@ The data is then split into a training and test dataset. 50% of the data is in t
 
 The hyperparameters that are tuned are the inverse regularization strength and the maximum number of interations to converge. The classification algorithm is Logistic regression which predicts whether a customer will subscribe to a fixed term deposit or not.
 
+![alt text](ScikitLearnPipelineProject1.png)
+
 **What are the benefits of the parameter sampler you chose?**
 
 A random sampling method was chosed to find the values. This method is quick compared to a grid search and normally results in similar accuracies.
